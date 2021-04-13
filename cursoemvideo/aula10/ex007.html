@@ -4,36 +4,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Somando Números</title>
+    <title>Calculadora Básica</title>
     <style>
         body{
             font: normal 18pt Arial;
-        }
-        input{
+            background: no-repeat;
+            background-color: cornflowerblue;
+    
+              }
+            input{
             font: normal 18pt Arial;
             width: 100px;
-             
-
+            border-radius: 10px;      
+            
+            
             }
         div#res{
             margin-top: 20px;
+            color: rgb(11, 1, 37);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 34px;
         }
          
         input#Sub{
             width: 119px;
+            color: rgba(37, 128, 9, 0.959);
+            background-color: black;
+            font-family: 'Helvetica Neue';
+             font-weight: bolder;
         }
         input#mult{
-            width: 119px;
+            width: 130px;
+            color: rgba(37, 128, 9, 0.959);
+            background-color: black;
+            font-family: 'Helvetica Neue';
+             font-weight: bolder;
+            
             
         }
+
+        input#somar{
+            width: 119px;
+            color: rgba(37, 128, 9, 0.959);
+            background-color: black;
+            font-family: 'Helvetica Neue';
+             font-weight: bolder;
+        }
+        
+        input#div{
+            width: 119px;
+            color: rgba(37, 128, 9, 0.959);
+            background-color: black;
+            font-family: 'Helvetica Neue';
+             font-weight: bolder;
+        }
+        h1{
+            color: lawngreen;
+            text-align: center;
+            
+        }
+        
     
     </style>
 </head>
 <br>
-    <h1>Somando Valores</h1>
-    <input type="number" name="txtn1" id="txtn1"> +
+    <h1>Calculadora básica</h1>
+    <input type="number" name="txtn1" id="txtn1" > +
     <input type="number" name="txtn2" id="txtn2">
-    <input type="button" value="Somar" onclick="somar()"></br>
+    <input type="button" value="Somar" onclick="somar()" id="somar"><button type="reset" onclick="limpar()">limpar soma</button></br>
     <input type="number" name="txtn3" id="txtn3"> -
     <input type="number" name="txtn4" id="txtn4">
     <input type="button" value="Subtrair" id="Sub" onclick="Sub()"><br>
@@ -43,7 +81,9 @@
     <input type="number" name="txtn7" id="txtn7"> /
     <input type="number" name="txtn8" id="txtn8">
     <input type="button" value="Dividir" id="div" onclick="div()">
-    <div id="res">Resultado</div>
+    <button type="reset" id="reset" onclick="reset()">Limpar o resultado</button>
+    
+    <div id="res"></div>
     <div id="resMult"></div>
     <script>
          function somar(){
@@ -84,6 +124,14 @@
          res.innerHTML = `A Divisão entre ${n7} e ${n8} é igual a <strong>${s}</strong>`         
          }
          
+         function reset(){
+             var LimparRes = window.document.getElementById('res')
+             LimparRes.innerHTML = ""
+         }
+         function limpar(){
+             var l1t = window.document.querySelector('input#txtn1').value=""
+             var l2t = window.document.querySelector('input#txtn2').value=""
+         }
 
     </script>
 </body>
