@@ -64,7 +64,7 @@
             
         }
         #Lsoma{
-            margin-left: 25px;
+            margin-left: 5px;
             padding: 2px;
             border-radius: 6px;
             color: rgb(255, 1, 56);
@@ -73,25 +73,35 @@
             
         }
         #Lsub{
-            margin-left: 25px;
+            margin-left: 5px;
             padding: 2px;
             border-radius: 6px;
             color: rgb(255, 1, 56);
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         }
         #Lmult{
-            margin-left: 25px;
+            margin-left: 5px;
             padding: 2px;
             border-radius: 6px;
             color: rgb(255, 1, 56);
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         }
         #Ldiv{
-            margin-left: 25px;
+            margin-left: 5px;
             padding: 2px;
             border-radius: 6px;
             color: rgb(255, 1, 56);
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        #reset{
+            position:absolute;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            transform: translateY(+70px);
+            
+            
+            
         }
         
     
@@ -101,16 +111,16 @@
     <h1>Calculadora básica</h1>
     <input type="number" name="txtn1" id="txtn1" > +
     <input type="number" name="txtn2" id="txtn2">
-    <input type="button" value="Somar" onclick="somar()" id="somar"><button type="reset" onclick="limpar()" id="Lsoma">limpar soma</button></br>
+    <input type="button" value="Somar" onclick="somar()" id="somar"><button type="reset" onclick="limpar()" id="Lsoma">Limpar</button></br>
     <input type="number" name="txtn3" id="txtn3"> -
     <input type="number" name="txtn4" id="txtn4">
-    <input type="button" value="Subtrair" id="Sub" onclick="Sub()"><button type="reset" onclick="limparSub()" id="Lsub">Limpar Subtração</button><br>
+    <input type="button" value="Subtrair" id="Sub" onclick="Sub()"><button type="reset" onclick="limparSub()" id="Lsub">Limpar</button><br>
     <input type="number" name="txtn5" id="txtn5"> *
     <input type="number" name="txtn6" id="txtn6">
-    <input type="button" value="Multiplicar" id="mult" onclick="mult()"><button type="reset" onclick="limparMult()" id="Lmult">Limpar Multiplicação</button><br>
+    <input type="button" value="Multiplicar" id="mult" onclick="mult()"><button type="reset" onclick="limparMult()" id="Lmult">Limpar</button><br>
     <input type="number" name="txtn7" id="txtn7"> /
     <input type="number" name="txtn8" id="txtn8">
-    <input type="button" value="Dividir" id="div" onclick="div()"><button type="reset" onclick="limparDiv()" id="Ldiv">Limpar Divisão</button>
+    <input type="button" value="Dividir" id="div" onclick="div()"><button type="reset" onclick="limparDiv()" id="Ldiv">Limpar</button>
     <button type="reset" id="reset" onclick="reset()">Limpar o resultado</button>
     
     <div id="res"></div>
@@ -123,7 +133,7 @@
              var n1 = Number(tn1.value) 
              var n2 = Number(tn2.value)
              var s = n1 + n2
-             res.innerHTML = `A soma entre ${n1} e ${n2} é igual á <strong>${s}</strong>`
+             res.innerHTML = `A soma entre ${n1} e ${n2} é igual á <strong>${s.toFixed(2)}</strong>`
          }
 
          function Sub(){
@@ -133,7 +143,7 @@
              var n3 = Number(tn3.value)
              var n4 = Number(tn4.value)
              var s = n3 - n4
-             res.innerHTML = `A Subtração entre ${n3} menos ${n4} é igual a <strong>${s}</strong>`
+             res.innerHTML = `A Subtração entre ${n3} menos ${n4} é igual a <strong>${s.toFixed(2)}</strong>`
          }
          function mult(){
              var tn5 = window.document.querySelector('input#txtn5')
@@ -142,7 +152,7 @@
              var n5 = Number(tn5.value)
              var n6 = Number(tn6.value)
              var s = n5 * n6 
-             res.innerHTML = `A Multiplicação entre ${n5} e ${n6} é igual a <strong>${s}</strong>`
+             res.innerHTML = `A Multiplicação entre ${n5} e ${n6} é igual a <strong>${s.toFixed(2)}</strong>`
          }
          function div(){
          var tn7 = window.document.querySelector('input#txtn7')
@@ -151,7 +161,7 @@
          var n7 = Number(tn7.value)
          var n8 = Number(tn8.value)
          var s = n7 / n8
-         res.innerHTML = `A Divisão entre ${n7} e ${n8} é igual a <strong>${s}</strong>`         
+         res.innerHTML = `A Divisão entre ${n7} e ${n8} é igual a <strong>${s.toFixed(2)}</strong>`         
          }
          
          function reset(){
