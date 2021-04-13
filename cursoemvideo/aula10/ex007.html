@@ -63,6 +63,36 @@
             text-align: center;
             
         }
+        #Lsoma{
+            margin-left: 25px;
+            padding: 2px;
+            border-radius: 6px;
+            color: rgb(255, 1, 56);
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+            
+        }
+        #Lsub{
+            margin-left: 25px;
+            padding: 2px;
+            border-radius: 6px;
+            color: rgb(255, 1, 56);
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        #Lmult{
+            margin-left: 25px;
+            padding: 2px;
+            border-radius: 6px;
+            color: rgb(255, 1, 56);
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        #Ldiv{
+            margin-left: 25px;
+            padding: 2px;
+            border-radius: 6px;
+            color: rgb(255, 1, 56);
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
         
     
     </style>
@@ -71,16 +101,16 @@
     <h1>Calculadora básica</h1>
     <input type="number" name="txtn1" id="txtn1" > +
     <input type="number" name="txtn2" id="txtn2">
-    <input type="button" value="Somar" onclick="somar()" id="somar"><button type="reset" onclick="limpar()">limpar soma</button></br>
+    <input type="button" value="Somar" onclick="somar()" id="somar"><button type="reset" onclick="limpar()" id="Lsoma">limpar soma</button></br>
     <input type="number" name="txtn3" id="txtn3"> -
     <input type="number" name="txtn4" id="txtn4">
-    <input type="button" value="Subtrair" id="Sub" onclick="Sub()"><br>
+    <input type="button" value="Subtrair" id="Sub" onclick="Sub()"><button type="reset" onclick="limparSub()" id="Lsub">Limpar Subtração</button><br>
     <input type="number" name="txtn5" id="txtn5"> *
     <input type="number" name="txtn6" id="txtn6">
-    <input type="button" value="Multiplicar" id="mult" onclick="mult()"><br>
+    <input type="button" value="Multiplicar" id="mult" onclick="mult()"><button type="reset" onclick="limparMult()" id="Lmult">Limpar Multiplicação</button><br>
     <input type="number" name="txtn7" id="txtn7"> /
     <input type="number" name="txtn8" id="txtn8">
-    <input type="button" value="Dividir" id="div" onclick="div()">
+    <input type="button" value="Dividir" id="div" onclick="div()"><button type="reset" onclick="limparDiv()" id="Ldiv">Limpar Divisão</button>
     <button type="reset" id="reset" onclick="reset()">Limpar o resultado</button>
     
     <div id="res"></div>
@@ -131,6 +161,18 @@
          function limpar(){
              var l1t = window.document.querySelector('input#txtn1').value=""
              var l2t = window.document.querySelector('input#txtn2').value=""
+         }
+         function limparSub(){
+            var l3t = window.document.querySelector('input#txtn3').value=""
+             var l4t = window.document.querySelector('input#txtn4').value=""
+         }
+         function limparMult(){
+            var l5t = window.document.querySelector('input#txtn5').value=""
+             var l6t = window.document.querySelector('input#txtn6').value=""
+         }
+         function limparDiv(){
+            var l7t = window.document.querySelector('input#txtn7').value=""
+             var l8t = window.document.querySelector('input#txtn8').value=""
          }
 
     </script>
