@@ -2,7 +2,7 @@
      var msg = window.document.getElementById('msg')
      var img = window.document.getElementById('img')
      var data = new Date()
-     var hora = 12 //data.getHours()
+     var hora = data.getHours()
      msg.innerHTML = `Agora são ${hora} horas.`
      if(hora >= 0 && hora < 12) {
          // BOM DIA!
