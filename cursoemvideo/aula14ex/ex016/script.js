@@ -1,7 +1,7 @@
-function contar(){
-    let ini = window.document.querySelector('input#txti')
-    let fim = window.document.querySelector('input#txtf')
-    let passo = window.document.querySelector('input#txtp')
+function contar() {
+    let ini = window.document.getElementById('txti')
+    let fim = window.document.getElementById('txtf')
+    let passo = window.document.getElementById('txtp')
     let res = window.document.querySelector('div#res')
 
     if(ini.value.length == 0 || fim.value.length == 0 || passo.value.length == 0){
@@ -12,8 +12,10 @@ function contar(){
         let f = Number(fim.value)
         let p = Number(passo.value)
 
-        for(let c = i; i < f; c += p)
-        res.innerHTML += `${c}`
+        for(let c = i; c <= f; c += p){
+           res.innerHTML += ` ${c} \u{1F449}` 
+        }
+        res.innerHTML += `\u{1F3C1}`
     }
 }
     
