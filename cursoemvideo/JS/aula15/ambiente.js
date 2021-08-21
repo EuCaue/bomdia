@@ -12,3 +12,5 @@ if (pos == -1){
 }else {
     console.log(`O valor 8 está na posição ${pos}`)
 }
+
+
