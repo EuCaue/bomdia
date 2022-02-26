@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo</title>
+    <title>Calculadora IMC</title>
     <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
@@ -13,11 +13,11 @@
 <body>
     
     <section class="container">
-        <h1>Tabela IMC</h1>
+        <h1 class="tabela">Tabela IMC</h1>
         <h2 id="imcCSS">IMC</h2>
         <h2 id="resCSS">Resultado</h2>
         <p> 
-            <ul type="square" class>
+            <ul type="square" class="imcEsq" >
                 <li>Menos do que 18,5</li>
                 <li>Entre 18,5 e 24,9</li>
                 <li>Entre 25 e 29,9</li>
@@ -25,8 +25,7 @@
                 <li>Entre 35 e 39,9</li>
                 <li>Mais do que 40</li>
             </ul>
-
-            
+   
         </p>
 
         <p class="imcDir"> 
@@ -39,6 +38,7 @@
                 <li>Obesidade grau 3</li>
             </ul>
         </p>
+
         <form action="" id="formulario">
             <h2>Calcule seu IMC</h2>
 

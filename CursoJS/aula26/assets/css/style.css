@@ -68,6 +68,11 @@ form button:active {
 #imcCSS{
     font-size: 25px;
     font-family: 'Open sans', sans-serif;
+    top: 22%;
+    display: inline-block;
+    position: absolute;
+    
+    
     
 }
 
@@ -81,9 +86,20 @@ form button:active {
     font-size: 18px;
     font: 'Open sans', sans-serif;
     width: -59px;
-    text-align: right;
-
+    bottom: 222px;
+    left: 59%;
+    position: absolute;
+    display: inline-block;
 };
-#imcCSS {
-    width: 500px;
+
+.imcEsq{
+    font-size: 18px;
+    font: 'Open sans', sans-serif;
+    width: 59%;
+
 }
+
+.tabela{
+    text-align: center;
+}
+

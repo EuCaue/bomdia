@@ -1,15 +1,18 @@
+// Pegando os valores
 const peso = document.querySelector('#pesoT');
 const altura = document.querySelector('#alturaT');
 const divR = document.querySelector('.div')
 const resultado = peso * altura**2
 const form = document.querySelector('#formulario')
 
+// "Função" principal e evitando o evento padrão do form
 form.addEventListener('submit', function (e){
     e.preventDefault();
     console.log('Evento Previnido');
     exbirResultado();    
 })
 
+// função ara escrever o resultado
 function setResultado (msg) {
     
     divR.innerHTML += `${msg} <style type="text/css" div{
@@ -17,6 +20,7 @@ function setResultado (msg) {
     }<style/> <br />`
 }
 
+// função para exbir o resultado.
 function exbirResultado () {
     let rR = peso.value / (altura.value * altura.value).toFixed(2)
     if (peso.value >= 1 && peso.value <= 595 && altura.value >= 0.5 && altura.value <= 2.71) {
