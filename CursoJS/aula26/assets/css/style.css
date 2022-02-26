@@ -71,8 +71,7 @@ form button:active {
     top: 22%;
     display: inline-block;
     position: absolute;
-    
-    
+    margin-left: 100px;
     
 }
 
@@ -80,6 +79,7 @@ form button:active {
     font-size: 25px;
     font-family: 'Open sans', sans-serif;
     text-align: right;
+    
 }
 
 .imcDir{
@@ -87,7 +87,7 @@ form button:active {
     font: 'Open sans', sans-serif;
     width: -59px;
     bottom: 222px;
-    left: 59%;
+    left: 58%;
     position: absolute;
     display: inline-block;
 };
@@ -101,5 +101,10 @@ form button:active {
 
 .tabela{
     text-align: center;
+}
+
+.div {
+    background: white;
+
 }
 
