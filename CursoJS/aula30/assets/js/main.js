@@ -76,7 +76,7 @@ function getTodayDay (diaSemana) {
 
 // "Pegando" o mês.
 function getMonth () {
-
+    // switch case pode ser subsistuido por array ou objetos
     let monthText; 
    switch (month) {
        case 0:
