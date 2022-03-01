@@ -4,10 +4,13 @@
 
 // campos de variáveis para as funções
 const dataNow = Date.now();
-const data  = new Date(dataNow);
+const data  = new Date(dataNow); 
+
 const diaSemana = data.getDay();
 const diaSemanaTexto = getTodayDay(diaSemana);
+
 const month = data.getMonth();
+
 const h1 = document.querySelector('.h1');
 
 // Função usada para escrever nos documentos
@@ -31,7 +34,7 @@ function dataFormat () {
     const day = data.getDate();
     const year = data.getFullYear();
     const hours = data.getHours();
-    const minutes = data.getMinutes()
+    const minutes = zeroAEsquerda(data.getMinutes());
     console.log(getTodayDay(diaSemana),day,getMonth(),year,hours, minutes);
     return `${weekDay}, ${day} de ${monthNow} de ${year} ${hours}:${minutes}`
 }
@@ -124,3 +127,8 @@ function getMonth () {
 
    }
 }
+
+// JEITO MAIS SIMPLES, porque ele não ensinou isso antes?????????????
+// const h1  = document.querySelector('.h1');
+// const data = new Date();
+// h1.innerHTML = data.toLocaleDateString('pt-BR', { dateStyle: 'full', timestyle:'short' });
