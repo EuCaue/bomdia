@@ -1,6 +1,6 @@
 // https://imgur.com/w8B60o8 exemplo do professor de como ele fez.
 
-const h1 = document.querySelector('.conteiner h1')
+const h1 = container.querySelector('h1')
 // elementos
 const elements = [
     { tag: 'p', texto: 'Frase 1' },
