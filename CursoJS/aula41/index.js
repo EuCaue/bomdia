@@ -18,4 +18,4 @@ const numHigh2 = (x, y) => {
 
 console.log(numHigh2(102, 20));
 
-numHigh('20', '100');
+numHigh('20', '100'); 
